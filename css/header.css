@@ -1,0 +1,143 @@
+*{
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+}
+.header{
+	width: 375px;
+	height: 74px;
+	background: #f2f2f2;
+	position: fixed;
+	left: 0;
+	top: 0;
+	display: flex;
+	flex-direction: column;
+}
+.header .headTop{
+	width: 375px;
+	height: 44px;
+	display: flex;
+	align-items: center;
+	background: #f2f2f2;
+	position: relative;
+	z-index: 10;
+}
+.headTop .log{
+	width: 50px;
+	height: 44px;
+	background-image: url(../img/milogo.png);
+	background-size: 25px auto;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+.headTop .search{
+	flex:1;
+	height: 33px;
+	border: 1px solid #ccc;
+	background-color: #fff;
+	border-radius: 2px;
+	display: flex;
+	flex-direction: row;
+}
+.headTop .search .icon{
+	width: 31px;
+	height: 31px;
+	background-image: url(../img/search4.png);
+	background-repeat: no-repeat;
+	background-size: 25px 25px;
+	background-position: center;
+}
+.headTop .search input{
+	background: transparent;
+	border: none;
+	outline: none;
+}
+.headTop .user{
+	width: 50px;
+	height: 44px;
+	background-image: url(../img/user.png);
+	background-size: 25px auto;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+.headNav{
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	flex:1;
+}
+.header .headNav>a{
+	text-decoration: none;
+	font-size: 14px;
+	color: rgb(116, 116, 116);
+}
+
+.header .headNav .download{
+	width: 20px;
+	height: 20px;
+	background-image: url(../img/download.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 100% auto;
+	position: relative;
+	z-index: 100;
+}
+
+.xhk{
+	width: 100vw;
+	height: 0vh;
+	background: rgba(0,0,0,0.3);
+	position: fixed;
+	left: 0;
+	top: 0;
+	transition:height 0.8s;
+	overflow: hidden;
+}
+
+#choose:checked~.xhk{
+	height: 100vh;
+}
+
+#choose:checked~.download{
+	transform: rotate(180deg);
+}
+.xhk .main{
+	width: 375px;
+	height: 130px;
+	background: #F2F2F2;
+	position: absolute;
+	top: 44px;
+	left: 0px;
+	padding-left: 11px;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+}
+.xhk .main .xhkTop{
+	width: 375px;
+	height: 30px;
+	font-size: 14px;
+	display: flex;
+	align-items: flex-end;
+}
+.xhk .main .xhkList{
+	width: 375px;
+	height: 100px;
+	display: flex;
+	flex-wrap: wrap;
+	align-content: space-evenly;
+}
+.xhk .main .xhkList a{
+	width: 80px;
+	height: 30px;
+	margin-right: 10px;
+	margin-bottom: 10px;
+	border: 1px solid #e5e5e5;
+	border-radius: 4px;
+	text-align: center;
+	line-height: 30px;
+	background-color: #FFFFFF;
+	text-decoration: none;
+	color: #3c3c3c;
+	font-size: 14px;
+}
